@@ -1,0 +1,5 @@
+@mixin border-radius($args){
+    @if($rounded == true){
+        border-radius: $args;
+    }
+}

@@ -1,0 +1,30 @@
+
+$card-padding-x: 1em;
+$card-padding-y: 1em;
+
+$card-bg-color: map-get($colors, gray);
+$card-border-color: $border-color;
+
+$card-border-lighten-fator: 70;
+$card-bg-lighten-fator: 1;
+
+.card {
+    border: 1px solid $card-border-color;
+    @include border-radius($border-radius);
+    // background-clip: border-box;
+  
+    .card-header {
+      @include header-footer(white, $card-bg-color, $card-border-color, 1px, "top");
+    }
+  
+    .card-body {
+      &:not(.card-body-flushed) {
+        padding: padding($card-padding-x, $card-padding-y);
+      }
+    }
+  
+    .card-footer {
+      @include header-footer(white, $card-bg-color, $card-border-color, 1px, "bottom");
+    }
+  }
+  

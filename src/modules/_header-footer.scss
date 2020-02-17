@@ -1,0 +1,13 @@
+@mixin header-footer($color, $background-color, $border-color, $border-with, $position) {
+    background-color: lighten($background-color, $card-bg-lighten-fator);
+    color: text-contrast(lighten($background-color, $card-bg-lighten-fator));
+    padding: padding($card-padding-x, $card-padding-y);
+    
+    @if ($position == "top") {
+      @include border-radius($border-radius $border-radius 0em 0em);
+      border-bottom: $border-with solid $border-color;
+    } @else {
+      @include border-radius(0em 0em $border-radius $border-radius);
+      border-top: $border-with solid $border-color;
+    }
+  }

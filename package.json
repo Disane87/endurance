@@ -1,0 +1,46 @@
+{
+  "name": "endurance.css",
+  "version": "0.0.1",
+  "description": "The modern and progressiv styling framework",
+  "main": "index.js",
+  "scripts": {
+    "build-css": "node-sass --watch --include-path src src/main.scss public/css/main.css --style compressed --color --trace",
+    "watch-css": "nodemon -e scss -x \"npm run build-css && npm run doc:sass\"",
+    "run-server": "node ./bin/live-server.js",
+    "serve": "npm run watch-css && node ./bin/live-server.js",
+    "doc:sass": "sassdoc src/ -d doc/",
+    "watch:page": "node-sass -w src/main.scss -o css --source-map=true --output-style=compressed & live-server --no-browser --ignore=css/sass,css/style.css.map"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Disane87/endurance.git"
+  },
+  "keywords": [
+    "css",
+    "edurance",
+    "javascript",
+    "html",
+    "scss",
+    "css-framework",
+    "sass",
+    "styling",
+    "css3",
+    "html5"
+  ],
+  "author": "Marco Franke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Disane87/endurance/issues"
+  },
+  "homepage": "https://github.com/Disane87/endurance#readme",
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "node-sass": "^4.13.1",
+    "nodemon": "^2.0.2",
+    "compass": "^0.1.1",
+    "live-server": "^1.2.1",
+    "sassdoc": "^2.7.1"
+  }
+}

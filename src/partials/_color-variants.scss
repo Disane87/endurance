@@ -1,0 +1,11 @@
+@use "sass:map";
+$new-colors: ();
+
+:root {
+    @each $c-name, $c-value in $colors {
+        $new-color: map-merge($new-colors, ('test-#{$c-name}': $c-value));
+        --#{$c-name}: #{$c-value};
+    }
+
+    
+}
